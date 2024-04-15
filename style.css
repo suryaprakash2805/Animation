@@ -127,7 +127,7 @@ button {
       transform: translateY(calc(25vh - 25%));
     }
     100% {
-      transform: translateY(25%);
+      transform: translateY(100%);
     }
   }
 }
