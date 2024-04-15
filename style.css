@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: auto;
+  max-width: 1000px;
+}
+
+#rectangleBox {
+  position: relative;
+
+  width: 1000px;
+  height: 300px;
+  background-color: black;
+  border: 10px solid black;
+
+  margin-bottom: 70px;
+
+  overflow: hidden;
+}
+
+.timeline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  width: 20%;
+  box-sizing: border-box;
+  transform-origin: top;
+}
+.line:nth-child(1) {
+  background-color: lightblue;
+}
+.line:nth-child(2) {
+  background-color: violet;
+}
+.line:nth-child(3) {
+  background-color: pink;
+}
+.line:nth-child(4) {
+  background-color: orange;
+}
+.line:nth-child(5) {
+  background-color: yellow;
+}
+
+.container {
+  display: flex;
+  gap: 175px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+#startBtn {
+  background-color: green;
+  color: white;
+}
+#resetBtn {
+  background-color: purple;
+  color: white;
+}
+#stopBtn {
+  background-color: red;
+  color: white;
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(50vh - 50%));
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    transform: rotate(90deg);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: -10;
+    left: 0;
+  }
+
+  @keyframes moveLine {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(calc(50vw - 50%));
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  #rectangleBox {
+    width: 600px;
+    height: 200px;
+    border: 7px solid black;
+    margin-bottom: 50px;
+  }
+
+  .container {
+    gap: 100px;
+  }
+
+  button {
+    padding: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+  }
+}
