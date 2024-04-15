@@ -101,21 +101,22 @@ button {
     width: 100vw;
     overflow: hidden;
     position: fixed;
-    top: -10;
+    top: -20;
     left: 0;
   }
 
   @keyframes moveLine {
     0% {
-      transform: translateX(0);
+      transform: translateY(0);
     }
     50% {
-      transform: translateX(calc(50vw - 50%));
+      transform: translateY(calc(50vh - 50%));
     }
     100% {
-      transform: translateX(100%);
+      transform: translateY(100%);
     }
   }
+
   #rectangleBox {
     width: 600px;
     height: 200px;
@@ -124,7 +125,7 @@ button {
   }
 
   .container {
-    gap: 100px;
+    gap: 120px;
   }
 
   button {
