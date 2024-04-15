@@ -32,10 +32,10 @@ function resetTimer() {
     line.style.animation = "none";
     line.style.animationPlayState = "initial";
     if (initialStyles[index]) {
-      line.style.transform = initialStyles[index]; // Restore initial position
+      line.style.transform = initialStyles[index];
     }
   });
-  pausedStyles = []; // Reset pausedStyles array
+  pausedStyles = [];
   animationStarted = false;
   document.getElementById("stopBtn").disabled = true;
   document.getElementById("startBtn").disabled = false;
